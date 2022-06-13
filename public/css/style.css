@@ -21257,4 +21257,18 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+nav {
+  background-color: #f5ebdf;
+  text-align: center;
+}
+nav .navbar-nav a {
+  text-transform: uppercase;
+  color: black !important;
+}
+
+#navbarNavAltMarkup {
+  display: flexbox;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=style.css.map */
