@@ -49,7 +49,9 @@
         <div><i class="fa-brands fa-instagram"></i></div>
         <div><i class="fa-brands fa-linkedin"></i></div>
         <div><i class="fa-brands fa-facebook"></i></div>
-        <div><p class="follow-us">FOLLOW US</p></div>
+        <div>
+          <p class="follow-us">FOLLOW US</p>
+        </div>
       </div>
       <div class="text-slider">
         <p class="smalltext"> &mdash;&mdash; NEW COLLECTION 2019 </p>
@@ -112,7 +114,8 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sequi voluptas. Ullam corrupti aperiam
             praesentium dolor inventore at fugit tempora nulla est animi tenetur vero, repellat modi doloremque esse
             enim!
-            Corrupti repellendus dolor magnam suscipit consequuntur, sequi soluta inventore dicta praesentium impedit.</p>
+            Corrupti repellendus dolor magnam suscipit consequuntur, sequi soluta inventore dicta praesentium impedit.
+          </p>
           <button class="btn bg-black text-light rounded-0">MORE INFORMATION</button>
         </div>
       </div>
@@ -303,29 +306,44 @@
         <div class="imageflower">
         </div>
         <div class="address">
-          <div class="adressdetails">
-            <h4>Address details</h4>
-            <p>401 Broadwar, 24th Floor <br> Iceland, Iceland 10013</p>
+          <div class="adressdetails row">
+            <div class="icon-address col-2">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="text-address col-10">
+              <h4>Address details</h4>
+              <p>401 Broadwar, 24th Floor <br> Iceland, Iceland 10013</p>
+            </div>
           </div>
-          <div class="emailaddress">
+        <div class="emailaddress row">
+          <div class="icon-address col-2">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="text-address col-10">
             <h4>Email address</h4>
             <p>info@domain.com <br> info@domain.com</p>
           </div>
-          <div class="telephonenumber">
+        </div>
+        <div class="telephonenumber row">
+          <div class="icon-address col-2">
+            <i class="fa-solid fa-phone-flip"></i>
+          </div>
+          <div class="text-address col-10">
             <h4>Telephone number</h4>
             <p>+ 1-800-222-000 <br> +1-600-123-000</p>
           </div>
         </div>
-        <div class="form">
-          <p class="text-xl text-white">Simply fill out the form and we'll be in touch with you soon!</p>
-          <form action="post">
-            <input type="tex" placeholder="Name">
-            <input type="email" placeholder="E-mail">
-            <input type="text" placeholder="Subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <button class="btn btn-light text-black rounded-0">SEND MESSAGE</button>
-          </form>
-        </div>
+      </div>
+      <div class="form">
+        <h4 class="text-white fw-bold">Simply fill out the form and we'll be in touch with you soon!</h4>
+        <form action="post">
+          <input type="text" placeholder="Name*">
+          <input type="email" placeholder="E-mail*">
+          <input type="text" placeholder="Subject">
+          <textarea name="" id="" cols="30" rows="4" placeholder="Your Message"></textarea>
+          <button class="btn btn-light text-black rounded-0">SEND MESSAGE</button>
+        </form>
+      </div>
       </div>
     </section>
     <section id="section12">
@@ -337,7 +355,8 @@
   <footer>
     <div class="newsletter">
       <p>LAST CHANCE TO WIN OUR DISCOUNT</p>
-      <div><input type="email" placeholder="Enter your email..."><button>SUBSCRIBE <i class="fa-solid fa-arrow-right"></i> </button></div>
+      <div><input type="email" placeholder="Enter your email..."><button>SUBSCRIBE <i
+            class="fa-solid fa-arrow-right"></i> </button></div>
       <p>ON SOCIAL NETWORKS</p>
       <div class="social">
         <i class="fa-brands fa-facebook"></i>
@@ -398,12 +417,12 @@
         </div>
       </div>
     </div>
-<div class="blackline">
-  <div class="contentblackline">
-  <p>&copy; 2022 MONGO is Proudly Powered by ThemeZaa</p>
-  <img src="../public/img/footer-payment-icon.png" alt="">
-</div>
-</div>
+    <div class="blackline">
+      <div class="contentblackline">
+        <p>&copy; 2022 MONGO is Proudly Powered by ThemeZaa</p>
+        <img src="../public/img/footer-payment-icon.png" alt="">
+      </div>
+    </div>
   </footer>
   <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>

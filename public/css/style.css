@@ -21323,9 +21323,13 @@ footer .newsletter {
   width: 70%;
   height: 75px;
   align-items: center;
+  align-content: center;
   margin: auto;
   display: flex;
   justify-content: space-between;
+}
+footer .newsletter p {
+  margin-block-end: 0px;
 }
 footer .newsletter input {
   background-color: #303030;
@@ -21335,6 +21339,9 @@ footer .newsletter button {
   background-color: #303030;
   border: none;
   color: lightgrey;
+}
+footer .newsletter .social > i {
+  margin-left: 10px;
 }
 footer .links {
   width: 70%;
@@ -21520,6 +21527,9 @@ footer .contentblackline img {
   margin-block-end: 0px;
 }
 
+#section10 {
+  margin-bottom: 25vh;
+}
 #section10 .card .card-footer {
   background-color: white !important;
 }
@@ -21530,7 +21540,7 @@ footer .contentblackline img {
 }
 #section11 .imageflower {
   background-image: url("../img/collect/one-page-img-04.jpg");
-  background-position: right;
+  background-position: center center;
   width: 35%;
   height: 700px;
 }
@@ -21541,8 +21551,18 @@ footer .contentblackline img {
   align-items: center;
   margin: auto;
 }
+#section11 .address .adressdetails, #section11 .address .emailaddress, #section11 .address .telephonenumber {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+#section11 .address .adressdetails .text-address, #section11 .address .emailaddress .text-address, #section11 .address .telephonenumber .text-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 #section11 .form {
-  background-image: url("../img/fashion/fashion-brand-parallax-bg.jpg");
+  background-image: url("../img/fashion/fashion-brand-parallax-bg.jpg"), linear-gradient(90deg, rgb(61, 60, 60) 0%, rgba(57, 56, 56, 0.4377101182) 100%);
   background-position: center;
   background-blend-mode: darken;
   display: flex;
@@ -21550,15 +21570,19 @@ footer .contentblackline img {
   flex-direction: column;
   width: 35%;
   padding: 5%;
+  justify-content: flex-start;
 }
 #section11 form {
   display: flex;
-  width: 85%;
+  width: 100%;
   flex-direction: column;
 }
 #section11 form input, #section11 form textarea {
   background-color: transparent;
   border: none;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 #section11 form button {
   width: 50%;

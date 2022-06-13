@@ -5,7 +5,7 @@
     background-color : $beige-gris
     .imageflower
         background-image: url('../img/collect/one-page-img-04.jpg')
-        background-position: right
+        background-position: center center
         width: 35%
         height:700px
     .address
@@ -14,8 +14,16 @@
         flex-direction: column
         align-items: center
         margin: auto
+        .adressdetails, .emailaddress, .telephonenumber
+            width: 70%
+            display: flex
+            justify-content: space-between
+            .text-address
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
     .form
-        background-image: url('../img/fashion/fashion-brand-parallax-bg.jpg')
+        background-image: url('../img/fashion/fashion-brand-parallax-bg.jpg'), linear-gradient(90deg, rgba(61,60,60,1) 0%, rgba(57,56,56,0.43771011822697825) 100%)
         background-position: center
         background-blend-mode: darken
         display: flex
@@ -23,12 +31,16 @@
         flex-direction: column
         width: 35%
         padding: 5%
+        justify-content: flex-start
     form
         display: flex
-        width:85%
+        width:100%
         flex-direction: column
         input, textarea
             background-color: transparent
             border: none
+            border-bottom: 1px solid $grey-text
+            padding-bottom: 15px
+            margin-bottom: 15px
         button
             width:50%
