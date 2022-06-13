@@ -21272,6 +21272,16 @@ nav .navbar-nav a {
   color: black !important;
 }
 
+body {
+  margin: 0;
+}
+
+main .alltext {
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  height: 200px;
+}
 main .smalltext {
   font-size: 0.8em;
   font-weight: bold;
@@ -21358,16 +21368,6 @@ main .theprinciple {
   align-items: center;
 }
 
-#section6 {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  height: 200px;
-  margin: auto;
-  align-items: center;
-  width: 20%;
-}
-
 #section7 {
   margin: auto;
   text-align: center;
@@ -21387,6 +21387,63 @@ main .theprinciple {
   color: grey;
   margin-block-start: 0px;
   margin-block-end: 0px;
+}
+
+#section8 {
+  background-color: #f7f2ed;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}
+#section8 .testimonialtextintro {
+  text-align: center;
+  width: 50%;
+}
+#section8 .alltext {
+  width: 80%;
+  margin: auto;
+}
+#section8 .alltext .row {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+#section8 .alltext .row .whitebg {
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+#section8 .alltext .row .whitebg p:first-child {
+  font-weight: bold;
+}
+#section8 .alltext .row img {
+  width: 50%;
+}
+
+#section10 .card .card-footer {
+  background-color: white !important;
+}
+
+#section11 {
+  width: 100%;
+}
+#section11 .imageflower {
+  background-image: url("../img/collect/one-page-img-04.jpg");
+  width: 40%;
+  height: 500px;
+}
+#section11 .address {
+  background-color: #f7f2ed;
+}
+#section11 .form {
+  background-image: url("../img/fashion/fashion-brand-parallax-bg.jpg");
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#section11 form {
+  flex-direction: column;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
