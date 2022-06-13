@@ -21263,13 +21263,28 @@ readers do not read off random characters that represent icons */
 }
 
 nav {
+  z-index: 10;
+  width: 100%;
   background-color: #f5ebdf;
   text-align: center;
   border-bottom: 1px solid lightgrey;
 }
+nav .navbar-nav {
+  width: 60%;
+  justify-content: flex-end;
+}
 nav .navbar-nav a {
   text-transform: uppercase;
   color: black !important;
+}
+nav .icons_header {
+  padding: 15px;
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .icons_header i {
+  margin-left: 15px;
 }
 
 body {
@@ -21291,8 +21306,67 @@ main .theprinciple {
   font-weight: bold;
 }
 
+footer {
+  background-color: #1e1e1e;
+  color: lightgrey;
+  width: 100%;
+}
+footer .row {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+footer h5, footer .h5 {
+  text-align: center;
+}
+footer .newsletter {
+  width: 70%;
+  height: 75px;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer .newsletter input {
+  background-color: #303030;
+  boder: none !important;
+}
+footer .newsletter button {
+  background-color: #303030;
+  border: none;
+  color: lightgrey;
+}
+footer .links {
+  width: 70%;
+  margin: auto;
+}
+footer .links li {
+  color: lightgrey;
+}
+footer .links .gridinsta {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .blackline {
+  background-color: black;
+  width: 100%;
+}
+footer .contentblackline {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  background-color: black;
+  align-items: center;
+}
+footer .contentblackline img {
+  height: 100%;
+}
+
 #section1 {
   background-image: url("../img/collect/one-page-slider-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 700px;
   width: 100%;
   background-position: center;
@@ -21305,7 +21379,7 @@ main .theprinciple {
 }
 #section1 .text-slider {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 15%;
   width: 20%;
 }
@@ -21313,10 +21387,27 @@ main .theprinciple {
   display: grid;
   grid-template-columns: 1fr;
   position: absolute;
-  top: 45%;
+  top: 35%;
+  text-align: center;
 }
 #section1 .social .follow-us {
   transform: rotate(-90deg);
+  margin-top: 50px;
+}
+#section1 .carroussel-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 35%;
+  right: 3%;
+}
+#section1 .womens {
+  color: white;
+  position: absolute;
+  font-size: 120px;
+  top: 85%;
+  left: 30%;
+  margin: auto;
 }
 
 #section2 {
@@ -21324,7 +21415,7 @@ main .theprinciple {
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  height: 200px;
+  height: 150px;
   margin: auto;
 }
 #section2 i {
@@ -21332,9 +21423,11 @@ main .theprinciple {
 }
 
 #section3 {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: no-wrap !important;
   text-align: center;
   gap: 1;
   height: 400px;
@@ -21351,6 +21444,9 @@ main .theprinciple {
 }
 #section4 .col {
   padding-top: 15%;
+}
+#section4 .col p {
+  margin-block-end: 0em;
 }
 #section4 .col:last-child {
   font-size: 0.8em;
@@ -21426,24 +21522,46 @@ main .theprinciple {
 
 #section11 {
   width: 100%;
+  background-color: #f7f2ed;
 }
 #section11 .imageflower {
   background-image: url("../img/collect/one-page-img-04.jpg");
-  width: 40%;
-  height: 500px;
+  background-position: right;
+  width: 35%;
+  height: 700px;
 }
 #section11 .address {
-  background-color: #f7f2ed;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 #section11 .form {
   background-image: url("../img/fashion/fashion-brand-parallax-bg.jpg");
+  background-position: center;
+  background-blend-mode: darken;
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 35%;
+  padding: 5%;
 }
 #section11 form {
+  display: flex;
+  width: 85%;
   flex-direction: column;
+}
+#section11 form input, #section11 form textarea {
   background-color: transparent;
+  border: none;
+}
+#section11 form button {
+  width: 50%;
+}
+
+#section12 {
+  height: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */
