@@ -21379,7 +21379,7 @@ footer .contentblackline img {
   background-image: url("../img/collect/one-page-slider-01.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 100vh;
   width: 100%;
   background-position: center;
 }
@@ -21391,9 +21391,9 @@ footer .contentblackline img {
 }
 #section1 .text-slider {
   position: absolute;
-  top: 35%;
-  left: 15%;
-  width: 20%;
+  top: 35vh;
+  left: 15vw;
+  width: 20vw;
 }
 #section1 .social {
   display: grid;
@@ -21423,7 +21423,7 @@ footer .contentblackline img {
   color: white;
   position: absolute;
   font-size: 120px;
-  top: 85%;
+  top: 91vh;
   left: 30%;
   margin: auto;
 }
@@ -21446,8 +21446,8 @@ footer .contentblackline img {
   justify-content: space-around;
   flex-wrap: no-wrap !important;
   text-align: center;
-  gap: 1;
-  height: 400px;
+  gap: 50px;
+  height: 500px;
   margin: auto;
 }
 #section3 img {
@@ -21460,7 +21460,8 @@ footer .contentblackline img {
   margin: auto;
 }
 #section4 .col {
-  padding-top: 15%;
+  padding: 5%;
+  padding-top: 10%;
 }
 #section4 .col p {
   margin-block-end: 0em;
@@ -21483,6 +21484,7 @@ footer .contentblackline img {
 
 #section7 {
   margin: auto;
+  margin-bottom: 25vh;
   text-align: center;
 }
 #section7 .container {

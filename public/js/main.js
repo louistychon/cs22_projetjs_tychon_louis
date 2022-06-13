@@ -1,3 +1,4 @@
+import {products} from './products.js'
 
 //header change color regarding scroll position
 
@@ -10,9 +11,20 @@ for (let index = 0; index < buttoncarroussel.length; index++) {
     buttoncarroussel[index].addEventListener("click", () => {
         console.log(imgcarroussel[index])
         let img = imgcarroussel[index]
-        section1.style.backgroundImage = "url("+img+")"
+        section1.style.backgroundImage = "url(" + img + ")"
     })
 }
+
+//section7 product gallery
+let section7 = document.getElementById("section7")
+
+for (let i = 0; i < 4; i++) {
+    let div = document.createElement("div")
+    div.classList.add("row")
+}
+
+
+
 
 
 //darkmode
