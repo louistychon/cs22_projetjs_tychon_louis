@@ -21295,7 +21295,8 @@ main .alltext {
   text-align: center;
   width: 20%;
   margin: auto;
-  height: 200px;
+  height: 150px;
+  margin-top: 4vh;
 }
 main .smalltext {
   font-size: 0.8em;
@@ -21423,7 +21424,6 @@ footer .contentblackline img {
 }
 
 #section3 {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -21487,7 +21487,7 @@ footer .contentblackline img {
 
 #section8 {
   background-color: #f7f2ed;
-  height: 700px;
+  height: 500px;
   display: flex;
   align-items: center;
 }
@@ -21495,25 +21495,29 @@ footer .contentblackline img {
   text-align: center;
   width: 50%;
 }
-#section8 .alltext {
+#section8 .alltext8 {
   width: 80%;
   margin: auto;
 }
-#section8 .alltext .row {
+#section8 .alltext8 .row {
   margin: auto;
   display: flex;
   align-items: center;
 }
-#section8 .alltext .row .whitebg {
+#section8 .alltext8 .row .whitebg {
   background-color: white;
   border-radius: 5px;
   padding: 30px;
 }
-#section8 .alltext .row .whitebg p:first-child {
+#section8 .alltext8 .row .whitebg p:first-child {
   font-weight: bold;
 }
-#section8 .alltext .row img {
+#section8 .alltext8 .row img {
   width: 50%;
+}
+#section8 .alltext8 .avatar p:first-child {
+  font-weight: bold;
+  margin-block-end: 0px;
 }
 
 #section10 .card .card-footer {
