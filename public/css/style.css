@@ -21337,7 +21337,7 @@ footer .newsletter input {
 }
 footer .newsletter button {
   background-color: #303030;
-  border: none;
+  border: 0px;
   color: lightgrey;
 }
 footer .newsletter .social > i {
@@ -21358,6 +21358,7 @@ footer .links .gridinsta {
 footer .blackline {
   background-color: black;
   width: 100%;
+  height: 50px;
 }
 footer .contentblackline {
   display: flex;
