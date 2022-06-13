@@ -21277,6 +21277,9 @@ nav .navbar-nav a {
   text-transform: uppercase;
   color: black !important;
 }
+nav .navbar-nav a a:focus {
+  text-decoration: underline;
+}
 nav .icons_header {
   padding: 15px;
   width: 30%;
@@ -21409,6 +21412,12 @@ footer .contentblackline img {
   flex-direction: column;
   top: 35%;
   right: 3%;
+}
+#section1 .carroussel-nav button:focus::before {
+  content: "-";
+}
+#section1 .carroussel-nav button:focus::after {
+  content: "-";
 }
 #section1 .womens {
   color: white;
