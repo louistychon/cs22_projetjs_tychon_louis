@@ -21275,10 +21275,7 @@ nav .navbar-nav {
 }
 nav .navbar-nav a {
   text-transform: uppercase;
-  color: black !important;
-}
-nav .navbar-nav a a:focus {
-  text-decoration: underline;
+  color: black;
 }
 nav .icons_header {
   padding: 15px;
@@ -21288,6 +21285,10 @@ nav .icons_header {
 }
 nav .icons_header i {
   margin-left: 15px;
+}
+
+.navbar-links-white {
+  color: white !important;
 }
 
 body {
