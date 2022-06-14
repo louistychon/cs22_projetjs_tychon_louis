@@ -21277,6 +21277,12 @@ nav .navbar-nav a {
   text-transform: uppercase;
   color: black;
 }
+nav .navbar-nav a a:link {
+  color: black;
+}
+nav .navbar-nav a a:active {
+  text-decoration: underline;
+}
 nav .icons_header {
   padding: 15px;
   width: 30%;
@@ -21424,7 +21430,7 @@ footer .contentblackline img {
   color: white;
   position: absolute;
   font-size: 120px;
-  top: 91vh;
+  top: 86vh;
   left: 30%;
   margin: auto;
 }

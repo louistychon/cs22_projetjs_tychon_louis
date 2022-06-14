@@ -10,7 +10,7 @@ let logo = document.querySelector('.logo')
 
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY
-    if(scrolled > 700) {
+    if (scrolled > 700) {
         navbar.style.backgroundColor = 'black'
         navbar.style.color = 'white'
         logo.setAttribute('src', 'public/img/white-logo.png')
@@ -35,16 +35,18 @@ let buttoncarroussel = document.getElementsByClassName('button-carroussel')
 
 for (let index = 0; index < buttoncarroussel.length; index++) {
     buttoncarroussel[index].addEventListener("click", () => {
-        console.log(imgcarroussel[index])
         let img = imgcarroussel[index]
         section1.style.backgroundImage = "url(" + img + ")"
     })
 }
 
+
 //section7 product gallery
 let productsi = document.getElementsByClassName("products")[0]
 let imagesproducts = document.getElementsByClassName('imgproduct')
 
+let sun = document.getElementsByTagName("i")[0]
+let moon = document.getElementsByTagName("i")[1]
 //row1 - the row-cols-5 in the bootstrap defines the wrap
 for (let i = 0; i < 10; i++) {
     //creation of elements
@@ -54,8 +56,8 @@ for (let i = 0; i < 10; i++) {
     let iconheart = document.createElement("i")
     let iconleft = document.createElement("i")
     let iconright = document.createElement("i")
-
-    let heartnav = document.getElementsByTagName("i")[2]
+    let heartnav = document.getElementsByTagName("i")[4]
+    let basketnav = document.getElementsByTagName("i")[5]
     //position and custom font-awesome classes 
     iconleft.classList.add("fa-solid", "fa-layer-group")
     iconright.classList.add("fa-solid", "fa-eye")
@@ -91,10 +93,10 @@ for (let i = 0; i < 10; i++) {
     divprices.style.justifyContent = "center"
     div3.style.backgroundColor = "white"
     div3.style.opacity = "0.9"
-    div3.style.height ="50px"
+    div3.style.height = "50px"
     div3.style.width = "50%"
     div4.style.backgroundColor = "white"
-    div4.style.height ="50px"
+    div4.style.height = "50px"
     div4.style.width = "50%"
     div3.style.position = "absolute"
     div4.style.position = "absolute"
@@ -110,7 +112,7 @@ for (let i = 0; i < 10; i++) {
     div.appendChild(name)
     div.appendChild(divprices)
     div.appendChild(iconheart)
-   
+
     //icon left and right positioning
 
     iconleft.style.top = "45%"
@@ -118,35 +120,72 @@ for (let i = 0; i < 10; i++) {
 
     //onhover image changes and the icons appears
     imagesproducts[i].addEventListener("mouseover", () => {
-        imagesproducts[i].setAttribute('src',  productstable[i].image2)
+        imagesproducts[i].setAttribute('src', productstable[i].image2)
         iconheart.style.visibility = "visible"
         iconleft.style.visibility = "visible"
         iconright.style.visibility = "visible"
-        iconheart.style.right ="10%"
-        iconheart.style.top ="5%"
+        iconheart.style.right = "10%"
+        iconheart.style.top = "5%"
         div3.appendChild(iconleft)
         div4.appendChild(iconright)
         div.appendChild(div3)
         div.appendChild(div4)
-        setTimeout(() =>{
-            imagesproducts[i].setAttribute('src',  productstable[i].image)
+        setTimeout(() => {
+            imagesproducts[i].setAttribute('src', productstable[i].image)
             iconheart.style.visibility = "hidden"
             iconleft.style.visibility = "hidden"
             iconright.style.visibility = "hidden"
-            div3.removeChild(iconleft)
-            div4.removeChild(iconright)
             div.removeChild(div3)
             div.removeChild(div4)
-        },2000)
-        let numbernav = 0
-        heartnav.innerHTML = numbernav
-        iconheart.addEventListener('click', () =>{
-            numbernav += 1
-        })
+        }, 2000)
     })
+    //increase number of likes in the nav
+    let numberlikes = 0
+    let productsliked = []
+    iconheart.addEventListener('click', () => {
+        iconheart.style.color = "red"
+        if (iconheart.style.color == "red") {
+            productsliked.push(productstable[i].name)
+        } else {
+            
+        }
+        heartnav.innerHTML += productsliked.length
+    })
+    //increase number of products in basket
+    let numberbasket = 0
+    iconleft.addEventListener('click', () => {
+        basketnav.innerHTML = numberbasket += 1
+    })
+    iconright.addEventListener('click', () => {
+        img.style.transform = "scale(1.5)";
+        img.style.transition = "transform 0.25s ease";
+        iconleft.style.visibility = "hidden"
+        iconright.style.visibility = "hidden"
+        iconheart.style.visibility = "hidden"
+        div3.style.visibility = "hidden"
+        div4.style.visibility = "hidden"
+        setTimeout(() => {
+            img.style.transform = "scale(1)";
+            img.style.transition = "transform 0.25s ease";
+            iconleft.style.visibility = "visible"
+            iconright.style.visibility = "visible"
+            iconheart.style.visibility = "visible"
+            div3.style.visibility = "visible"
+            div4.style.visibility = "visible"
+        }, 2000)
+    })
+
 }
 
+let p = document.getElementsByTagName("p")
+sun.addEventListener('click', () => {
+    document.body.style.backgroundColor = "black"
+    // p.forEach(element => {element.style.backgroundColor = "white"})
+})
+
 //carrousel testimonial
+
+
 
 //darkmode
 
