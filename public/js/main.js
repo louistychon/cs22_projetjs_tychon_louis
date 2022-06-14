@@ -1,22 +1,23 @@
-import {products} from './products.js'
-console.log(products)
+import {
+    productstable
+} from './products.js'
+console.log(productstable)
 
 //header change color regarding scroll position
 let navbar = document.querySelector('nav')
 let navlinks = document.querySelectorAll('.nav-link')
 let logo = document.querySelector('.logo')
 
-window.addEventListener('scroll',() => {
+window.addEventListener('scroll', () => {
     const scrolled = window.scrollY
-    if (scrolled > 700){
+    if (scrolled > 700) {
         navbar.style.backgroundColor = 'black'
         navbar.style.color = 'white'
         logo.setAttribute('src', 'public/img/white-logo.png')
         navlinks.forEach(element => {
             element.classList.add('navbar-links-white')
         });
-    }
-    else{
+    } else {
         navbar.style.backgroundColor = '#f5ebdf'
         navbar.style.color = 'black'
         logo.setAttribute('src', 'public/img/logo.png')
@@ -41,18 +42,53 @@ for (let index = 0; index < buttoncarroussel.length; index++) {
 }
 
 //section7 product gallery
-let section7 = document.getElementById("section7")
-let products = document.getElementsByclassName("products")[0]
+let productsi = document.getElementsByClassName("products")[0]
 
-for (let i = 0; i < 4; i++) {
+//row1 - the row-cols-5 in the bootstrap defines the wrap
+for (let i = 0; i < 10; i++) {
     let div = document.createElement("div")
-    div.classList.add("row")
+    div.classList.add("col")
+    let img = document.createElement('img')
+    img.setAttribute('src', productstable[i].image)
+    img.classList.add("imgproduct")
+    let name = document.createElement('p')
+    name.innerHTML = productstable[i].name
+    name.style.fontWeight = "bold"
+    let oldprice = document.createElement('p')
+    let divprices = document.createElement('div')
+    oldprice.innerHTML = productstable[i].oldprice
+    oldprice.style.textDecoration = "line-through"
+    oldprice.style.color = "rgb(177, 171, 171)"
+    oldprice.style.padding = "10px"
+    let newprice = document.createElement('p')
+    newprice.innerHTML = productstable[i].newprice
+    newprice.style.color = "rgb(177, 171, 171)"
+    newprice.style.padding = "10px"
+    divprices.appendChild(oldprice)
+    divprices.appendChild(newprice)
+    divprices.style.display = "flex"
+    divprices.style.justifyContent = "center"
+    div.appendChild(img)
+    div.appendChild(name)
+    div.appendChild(divprices)
+    productsi.appendChild(div)
 }
 
+//onhover image changes and the icons appears
+
+let imagesproducts = document.getElementsByClassName('imgproduct')
+
+for (let i = 0; i < imagesproducts.length; i++) {
+    imagesproducts[i].addEventListener("mouseover", () => {
+        imagesproducts[i].setAttribute('src',  productstable[i].image2)
+        setTimeout(() =>{
+            imagesproducts[i].setAttribute('src',  productstable[i].image)
+        },2000)
+    })
+}
+
+
 //darkmode
-
-
-//modal bootstrap
 
 //carrousel testimonial
 

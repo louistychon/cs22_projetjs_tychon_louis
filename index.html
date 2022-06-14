@@ -34,7 +34,7 @@
           </div>
           <div class="icons_header">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             <i class="fa-solid fa-heart"></i>
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -44,6 +44,28 @@
   </header>
   <main>
     <section id="section1">
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign up now !</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="col">
+                <div class="row w-75 m-auto"><div class="col"><p>Name :</p></div><div class="col"><input type="text"></div></div>
+                <div class="row w-75 m-auto mt-1"><div class="col"><p>Email :</p></div><div class="col"><input type="email"></div></div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn bg-black text-white rounded-0" data-bs-dismiss="modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End modal-->
       <div class="social">
         <div><i class="fa-brands fa-twitter"></i></div>
         <div><i class="fa-brands fa-instagram"></i></div>
@@ -127,59 +149,7 @@
       </div>
     </section>
     <section id="section7">
-      <div class="row container products">
-        <!-- <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-01-1-1.jpg" alt="" srcset="">
-          <p class="textshop">Textured Sweater</p>
-          <p class="priceshop">$50.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-02-1-1.jpg" alt="" srcset="">
-          <p class="textshop">Traveller Shirt</p>
-          <p class="priceshop">$510.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-01-b.jpg" alt="" srcset="">
-          <p class="textshop">Crowneck Sweatshirt</p>
-          <p class="priceshop">$20.00 - $50.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-04.jpg" alt="" srcset="">
-          <p class="textshop">Skinny Trousers</p>
-          <p class="priceshop">$200.00 $160.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-05-1.jpg" alt="" srcset="">
-          <p class="textshop">High Neck Sweater</p>
-          <p class="priceshop">$40.00 35.00</p>
-        </div>
-      </div>
-      <div class="row container">
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-06-1.jpg" alt="" srcset="">
-          <p class="textshop">Sleeve Sweater</p>
-          <p class="priceshop"><span class="text-decoration-line-through">$140.00</span> $120.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-07-1.jpg" alt="" srcset="">
-          <p class="textshop">Pocket Sweatshirt</p>
-          <p class="priceshop">$410.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-08-1.jpg" alt="" srcset="">
-          <p class="textshop">Top With pleated</p>
-          <p class="priceshop">$20.00 - $50.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-01-d.jpg" alt="" srcset="">
-          <p class="textshop">Cotton Sweater</p>
-          <p class="priceshop"><span class="text-decoration-line-through">$180.00</span> $155.00</p>
-        </div>
-        <div class="col">
-          <img src="../public/img/fashion/fashion-recent-products-10-1.jpg" alt="" srcset="">
-          <p class="textshop">Texture plain Regular</p>
-          <p class="priceshop"><span class="text-decoration-line-through">$85.00</span> $70.00</p>
-        </div> -->
+      <div class="row row-cols-5 container products">
       </div>
     </section>
     <section id="section8">
@@ -197,8 +167,8 @@
             </div>
             <div class="avatar">
               <div class="row">
-                <div class="col-4 text-center text-center mt-2"><img src="../public/img/testimonials/image-2.png" class="rounded-circle img-fluid"
-                    alt="" srcset=""></div>
+                <div class="col-4 text-center text-center mt-2"><img src="../public/img/testimonials/image-2.png"
+                    class="rounded-circle img-fluid" alt="" srcset=""></div>
                 <div class="col-8 mt-2">
                   <p>Alexander Harvard</p>
                   <p>Director</p>
@@ -214,8 +184,8 @@
             </div>
             <div class="avatar">
               <div class="row">
-                <div class="col-4 text-center mt-2"><img src="../public/img/testimonials/image-3.png" class="rounded-circle img-fluid"
-                    alt="" srcset=""></div>
+                <div class="col-4 text-center mt-2"><img src="../public/img/testimonials/image-3.png"
+                    class="rounded-circle img-fluid" alt="" srcset=""></div>
                 <div class="col-8 mt-2">
                   <p>Alexander Harvard</p>
                   <p>Director</p>
@@ -231,8 +201,8 @@
             </div>
             <div class="avatar">
               <div class="row">
-                <div class="col-4 text-center mt-2"><img src="../public/img/testimonials/image-1-1.png" class="rounded-circle img-fluid"
-                    alt="" srcset=""></div>
+                <div class="col-4 text-center mt-2"><img src="../public/img/testimonials/image-1-1.png"
+                    class="rounded-circle img-fluid" alt="" srcset=""></div>
                 <div class="col-8 mt-2">
                   <p>Alexander Harvard</p>
                   <p>Director</p>
@@ -315,35 +285,35 @@
               <p>401 Broadwar, 24th Floor <br> Iceland, Iceland 10013</p>
             </div>
           </div>
-        <div class="emailaddress row">
-          <div class="icon-address col-2">
-            <i class="fa-solid fa-envelope"></i>
+          <div class="emailaddress row">
+            <div class="icon-address col-2">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="text-address col-10">
+              <h4>Email address</h4>
+              <p>info@domain.com <br> info@domain.com</p>
+            </div>
           </div>
-          <div class="text-address col-10">
-            <h4>Email address</h4>
-            <p>info@domain.com <br> info@domain.com</p>
+          <div class="telephonenumber row">
+            <div class="icon-address col-2">
+              <i class="fa-solid fa-phone-flip"></i>
+            </div>
+            <div class="text-address col-10">
+              <h4>Telephone number</h4>
+              <p>+ 1-800-222-000 <br> +1-600-123-000</p>
+            </div>
           </div>
         </div>
-        <div class="telephonenumber row">
-          <div class="icon-address col-2">
-            <i class="fa-solid fa-phone-flip"></i>
-          </div>
-          <div class="text-address col-10">
-            <h4>Telephone number</h4>
-            <p>+ 1-800-222-000 <br> +1-600-123-000</p>
-          </div>
+        <div class="form">
+          <h4 class="text-white fw-bold">Simply fill out the form and we'll be in touch with you soon!</h4>
+          <form action="post">
+            <input type="text" placeholder="Name*">
+            <input type="email" placeholder="E-mail*">
+            <input type="text" placeholder="Subject">
+            <textarea name="" id="" cols="30" rows="4" placeholder="Your Message"></textarea>
+            <button class="btn btn-light text-black rounded-0">SEND MESSAGE</button>
+          </form>
         </div>
-      </div>
-      <div class="form">
-        <h4 class="text-white fw-bold">Simply fill out the form and we'll be in touch with you soon!</h4>
-        <form action="post">
-          <input type="text" placeholder="Name*">
-          <input type="email" placeholder="E-mail*">
-          <input type="text" placeholder="Subject">
-          <textarea name="" id="" cols="30" rows="4" placeholder="Your Message"></textarea>
-          <button class="btn btn-light text-black rounded-0">SEND MESSAGE</button>
-        </form>
-      </div>
       </div>
     </section>
     <section id="section12">
