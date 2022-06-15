@@ -21314,7 +21314,7 @@ body {
 
 main .alltext {
   text-align: center;
-  width: 20%;
+  width: 40%;
   margin: auto;
   height: fit-content;
   margin-top: 4vh;
@@ -21330,7 +21330,7 @@ main .theprinciple {
 
 @media (max-width: 768px) {
   .alltext {
-    width: 50%;
+    width: 100%;
   }
 }
 footer {
@@ -21468,7 +21468,7 @@ footer .inputlike {
   color: white;
   position: absolute;
   font-size: 120px;
-  top: 86vh;
+  top: 90vh;
   left: 30%;
   margin: auto;
 }
@@ -21493,6 +21493,25 @@ footer .inputlike {
   .womens {
     display: none;
   }
+
+  .text-slider {
+    width: 40vw !important;
+  }
+}
+@media (max-width: 600px) {
+  .text-slider {
+    width: 80vw !important;
+  }
+
+  .social {
+    display: none !important;
+  }
+
+  .carroussel-nav {
+    flex-direction: row !important;
+    top: 65vh !important;
+    right: 35vw !important;
+  }
 }
 #section2 {
   display: flex;
@@ -21501,14 +21520,22 @@ footer .inputlike {
   width: 60%;
   height: fit-content;
   margin: auto;
+  margin-top: 5vh;
+  padding-bottom: 5vh;
 }
 #section2 i {
   margin-right: 5px;
 }
 
+@media (max-width: 768px) {
+  #section2 {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 #section3 {
   gap: 50px;
-  height: 300px;
+  height: fit-content;
   margin: auto;
 }
 #section3 img {
@@ -21528,7 +21555,7 @@ footer .inputlike {
   }
 }
 #section4 {
-  height: 400px;
+  height: fit-content;
   width: 60%;
   margin: auto;
 }
@@ -21651,6 +21678,8 @@ footer .inputlike {
 
 #section11 {
   width: 100%;
+  padding-top: 5vh;
+  margin-bottom: 5vh;
   background-color: #f7f2ed;
 }
 #section11 .imageflower {
@@ -21719,6 +21748,9 @@ footer .inputlike {
   .form {
     width: 100% !important;
   }
+  .form h4, .form .h4 {
+    width: 80% !important;
+  }
 
   form {
     width: 80% !important;
@@ -21728,13 +21760,9 @@ footer .inputlike {
   }
 }
 #section12 {
-  height: 300px;
-}
-
-@media (max-width: 768px) {
-  #section12 {
-    height: 200px;
-  }
+  height: fit-content;
+  padding-bottom: 5vh;
+  text-align: center !important;
 }
 
 /*# sourceMappingURL=style.css.map */
