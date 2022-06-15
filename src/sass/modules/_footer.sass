@@ -7,11 +7,9 @@ footer
     .row 
         padding-right: 0px !important
         padding-left: 0px !important
-    h5
-        text-align: center
     .newsletter
         width: 70%
-        height: 75px
+        height: fit-content
         align-items: center
         align-content: center
         margin: auto
@@ -32,6 +30,7 @@ footer
     .links
         width: 70%
         margin: auto
+        margin-top: 3vh
         ul
             padding-inline-start: 0px
         li
@@ -58,7 +57,7 @@ footer
 
 @media (max-width: 1023px)
     .newsletter, .contentblackline, .links
-        width: 98% !important
+        width: 100% !important
 @media (max-width: 768px)
     .newsletter, .contentblackline, .links
         text-align: center
@@ -66,5 +65,12 @@ footer
         flex-wrap: wrap
         .col
             margin-top: 3%
+@media (max-width: 320px)
+    .newsletter > div
+        flex-direction: column
+        padding-top: 2vh
+    .newsletter
+        padding-top: 2vh
+
         
             

@@ -21257,11 +21257,6 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-#navbarNavAltMarkup {
-  display: flexbox;
-  justify-content: space-around;
-}
-
 nav {
   z-index: 10;
   width: 100%;
@@ -21298,7 +21293,7 @@ nav .icons_header i {
   color: white !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .navbar-collapse {
     display: flex;
     flex-direction: column;
@@ -21347,12 +21342,9 @@ footer .row {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
-footer h5, footer .h5 {
-  text-align: center;
-}
 footer .newsletter {
   width: 70%;
-  height: 75px;
+  height: fit-content;
   align-items: center;
   align-content: center;
   margin: auto;
@@ -21378,6 +21370,7 @@ footer .newsletter .social > i {
 footer .links {
   width: 70%;
   margin: auto;
+  margin-top: 3vh;
 }
 footer .links ul {
   padding-inline-start: 0px;
@@ -21412,7 +21405,7 @@ footer .inputlike {
 
 @media (max-width: 1023px) {
   .newsletter, .contentblackline, .links {
-    width: 98% !important;
+    width: 100% !important;
   }
 }
 @media (max-width: 768px) {
@@ -21423,6 +21416,16 @@ footer .inputlike {
   }
   .newsletter .col, .contentblackline .col, .links .col {
     margin-top: 3%;
+  }
+}
+@media (max-width: 320px) {
+  .newsletter > div {
+    flex-direction: column;
+    padding-top: 2vh;
+  }
+
+  .newsletter {
+    padding-top: 2vh;
   }
 }
 #section1 {
@@ -21507,7 +21510,7 @@ footer .inputlike {
     background-position: right;
   }
   #section1 .text-slider {
-    width: 100vw !important;
+    width: 80vw !important;
   }
   #section1 .social {
     display: none !important;
@@ -21580,6 +21583,8 @@ footer .inputlike {
   height: fit-content;
 }
 #section5 .row {
+  padding-top: 5vh !important;
+  padding-bottom: 5vh !important;
   width: 70%;
   margin: auto;
   display: flex;
@@ -21683,7 +21688,6 @@ footer .inputlike {
 
 #section11 {
   width: 100%;
-  padding-top: 5vh;
   margin-bottom: 5vh;
   background-color: #f7f2ed;
 }
@@ -21732,6 +21736,9 @@ footer .inputlike {
   border-bottom: 1px solid lightgrey;
   padding-bottom: 15px;
   margin-bottom: 15px;
+}
+#section11 form input ::placeholder, #section11 form textarea ::placeholder {
+  color: grey;
 }
 #section11 form button {
   width: 50%;
