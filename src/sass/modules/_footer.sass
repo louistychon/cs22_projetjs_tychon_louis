@@ -16,6 +16,7 @@ footer
         align-content: center
         margin: auto
         display: flex
+        flex-wrap: nowrap
         justify-content: space-between
         p
             margin-block-end: 0px
@@ -24,7 +25,7 @@ footer
             boder: none !important
         button
             background-color: #303030
-            border: 0px
+            border: none
             color: $grey-text
         .social > i
             margin-left: 10px
@@ -54,5 +55,16 @@ footer
             height:100%
     .inputlike
         background-color: #303030
+
+@media (max-width: 1023px)
+    .newsletter, .contentblackline, .links
+        width: 98% !important
+@media (max-width: 768px)
+    .newsletter, .contentblackline, .links
+        text-align: center
+        flex-direction: column
+        flex-wrap: wrap
+        .col
+            margin-top: 3%
         
             

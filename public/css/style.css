@@ -21316,7 +21316,7 @@ main .alltext {
   text-align: center;
   width: 20%;
   margin: auto;
-  height: 150px;
+  height: fit-content;
   margin-top: 4vh;
 }
 main .smalltext {
@@ -21347,6 +21347,7 @@ footer .newsletter {
   align-content: center;
   margin: auto;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 footer .newsletter p {
@@ -21358,7 +21359,7 @@ footer .newsletter input {
 }
 footer .newsletter button {
   background-color: #303030;
-  border: 0px;
+  border: none;
   color: lightgrey;
 }
 footer .newsletter .social > i {
@@ -21399,6 +21400,21 @@ footer .inputlike {
   background-color: #303030;
 }
 
+@media (max-width: 1023px) {
+  .newsletter, .contentblackline, .links {
+    width: 98% !important;
+  }
+}
+@media (max-width: 768px) {
+  .newsletter, .contentblackline, .links {
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .newsletter .col, .contentblackline .col, .links .col {
+    margin-top: 3%;
+  }
+}
 #section1 {
   background-image: url("../img/collect/one-page-slider-01.jpg");
   background-size: cover;
@@ -21468,12 +21484,17 @@ footer .inputlike {
     right: 3vh;
   }
 }
+@media (max-width: 768px) {
+  .womens {
+    display: none;
+  }
+}
 #section2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  height: 150px;
+  height: fit-content;
   margin: auto;
 }
 #section2 i {
@@ -21489,6 +21510,18 @@ footer .inputlike {
   height: 100% !important;
 }
 
+@media (max-width: 768px) {
+  #section3 {
+    height: fit-content;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery img {
+    height: 70% !important;
+  }
+}
 #section4 {
   height: 400px;
   width: 60%;
@@ -21507,16 +21540,33 @@ footer .inputlike {
 
 #section5 {
   background-color: #f7f2ed;
-  height: 550px;
+  height: fit-content;
 }
 #section5 .row {
-  height: 550px;
-  width: 50%;
+  width: 70%;
   margin: auto;
   display: flex;
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  #section5 {
+    padding-top: 20px;
+    text-align: center;
+  }
+  #section5 .row {
+    flex-direction: column !important;
+  }
+  #section5 .row .col {
+    width: 100% !important;
+  }
+  #section5 .smalltext {
+    padding-top: 20px;
+  }
+  #section5 button {
+    margin-bottom: 20px;
+  }
+}
 #section7 {
   margin: auto;
   margin-bottom: 25vh;
@@ -21526,6 +21576,9 @@ footer .inputlike {
   display: flex;
   width: 100%;
   margin: auto;
+}
+#section7 .container p {
+  margin-bottom: 0px;
 }
 #section7 .div-icon1 {
   position: absolute;
@@ -21546,7 +21599,6 @@ footer .inputlike {
 
 #section8 {
   background-color: #f7f2ed;
-  height: 500px;
   display: flex;
   align-items: center;
 }
@@ -21558,27 +21610,33 @@ footer .inputlike {
   width: 80%;
   margin: auto;
 }
-#section8 .alltext8 .row {
+#section8 .row {
   margin: auto;
   display: flex;
   align-items: center;
 }
-#section8 .alltext8 .row .whitebg {
+#section8 .row .whitebg {
   background-color: white;
   border-radius: 5px;
   padding: 30px;
 }
-#section8 .alltext8 .row .whitebg p:first-child {
+#section8 .row .whitebg p:first-child {
   font-weight: bold;
 }
-#section8 .alltext8 .row img {
-  width: 50%;
-}
-#section8 .alltext8 .avatar p:first-child {
+#section8 .row .avatar p:first-child {
   font-weight: bold;
   margin-block-end: 0px;
 }
 
+@media (max-width: 768px) {
+  .carroussel-testmonials > .row {
+    width: 100%;
+  }
+
+  .alltext8 {
+    width: 100% !important;
+  }
+}
 #section10 {
   margin-bottom: 25vh;
 }
@@ -21640,8 +21698,35 @@ footer .inputlike {
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  .address {
+    width: 80% !important;
+  }
+
+  .imageflower {
+    display: none;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100% !important;
+  }
+
+  form {
+    width: 80% !important;
+  }
+}
 #section12 {
   height: 300px;
+}
+
+@media (max-width: 768px) {
+  #section12 {
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

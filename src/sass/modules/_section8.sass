@@ -2,27 +2,30 @@
 
 #section8
     background-color: $beige-gris
-    height: 500px
     display: flex
     align-items: center
     .testimonialtextintro
         text-align: center
-        width:50%
+        width: 50%
     .alltext8
         width: 80%
         margin: auto
-        .row
-            margin: auto
-            display: flex
-            align-items: center
-            .whitebg
-                background-color: white
-                border-radius: 5px
-                padding:30px
-                p:first-child
-                    font-weight: bold
-            img
-                width: 50%
+    .row
+        margin: auto
+        display: flex
+        align-items: center
+        .whitebg
+            background-color: white
+            border-radius: 5px
+            padding: 30px
+            p:first-child
+                font-weight: bold
         .avatar p:first-child
             font-weight: bold
             margin-block-end: 0px
+
+@media (max-width: 768px)
+    .carroussel-testmonials > .row
+        width: 100%
+    .alltext8
+        width: 100% !important

@@ -56,7 +56,7 @@ for (let index = 0; index < buttoncarroussel.length; index++) {
 let productsi = document.getElementsByClassName("products")[0]
 let imagesproducts = document.getElementsByClassName('imgproduct')
 
-let moon = document.getElementsByTagName("i")[0]
+let moon = document.getElementsByTagName("i")[1]
 //row1 - the row-cols-5 in the bootstrap defines the wrap
 for (let i = 0; i < 10; i++) {
     //creation of elements
@@ -66,8 +66,8 @@ for (let i = 0; i < 10; i++) {
     let iconheart = document.createElement("i")
     let iconleft = document.createElement("i")
     let iconright = document.createElement("i")
-    let heartnav = document.getElementsByTagName("i")[3]
-    let basketnav = document.getElementsByTagName("i")[4]
+    let heartnav = document.getElementsByTagName("i")[4]
+    let basketnav = document.getElementsByTagName("i")[5]
     //position and custom font-awesome classes 
     iconleft.classList.add("fa-solid", "fa-layer-group")
     iconright.classList.add("fa-solid", "fa-eye")
@@ -193,6 +193,8 @@ for (let i = 0; i < 10; i++) {
 let containerCarroussel = document.getElementsByClassName("carroussel-testimonials")[0]
 
 let tablecolumns = [];
+let rowcontentelement = document.createElement("div")
+rowcontentelement.classList.add("row")
 let rightarrow = document.createElement('i')
 rightarrow.classList.add('fa-solid', 'fa-arrow-right')
 let leftarrow = document.createElement('i')
@@ -204,20 +206,20 @@ col12.classList.add('col-1')
 col1.appendChild(leftarrow)
 col12.appendChild(rightarrow)
 
-containerCarroussel.appendChild(col1)
+rowcontentelement.appendChild(col1)
 
 for (let i = 0; i < 6; i++) {
     let desc = document.createElement('p')
     let title = document.createElement('p')
     let column = document.createElement('div')
-    column.classList.add('element-carroussel')
+    column.classList.add('element-carroussel', "col-3")
     let whitebackground = document.createElement('div')
     let divavatar = document.createElement('div')
     divavatar.classList.add('avatar')
     let row2 = document.createElement('div')
     row2.classList.add('row')
     let col4 = document.createElement('div')
-    col4.classList.add('col-4', "text-center", "mt-2")
+    col4.classList.add('4', "text-center", "mt-2")
     let imgavatar = document.createElement('img')
     imgavatar.setAttribute('src', testimonialstable[i].image)
     imgavatar.classList.add('rounded-circle', "img-fluid", "w-50")
@@ -228,7 +230,6 @@ for (let i = 0; i < 6; i++) {
     pname.innerHTML = testimonialstable[i].name
     pjob.innerHTML = testimonialstable[i].job
     column.appendChild(whitebackground)
-    column.classList.add('col')
     tablecolumns.push(column)
     title.innerHTML = testimonialstable[i].title
     desc.innerHTML = testimonialstable[i].desc
@@ -246,7 +247,8 @@ for (let i = 0; i < 6; i++) {
     columnavatar2.appendChild(pjob)
     row2.appendChild(columnavatar2)
     pname.style.fontWeight = "bold"
-    containerCarroussel.appendChild(column)
+    rowcontentelement.appendChild(column)
+    containerCarroussel.appendChild(rowcontentelement)
 }
 
 let columns = document.getElementsByClassName('element-carroussel')
@@ -292,8 +294,8 @@ rightarrow.addEventListener('click', () => {
         columns[5].style.display = "none"
     }
 })
+rowcontentelement.appendChild(col12)
 
-containerCarroussel.appendChild(col12)
 
 
 //darkmode
