@@ -212,7 +212,7 @@ for (let i = 0; i < 6; i++) {
     let desc = document.createElement('p')
     let title = document.createElement('p')
     let column = document.createElement('div')
-    column.classList.add('element-carroussel', "col-3")
+    column.classList.add('element-carroussel', "col-12", "col-md-3")
     let whitebackground = document.createElement('div')
     let divavatar = document.createElement('div')
     divavatar.classList.add('avatar')
@@ -250,6 +250,8 @@ for (let i = 0; i < 6; i++) {
     rowcontentelement.appendChild(column)
     containerCarroussel.appendChild(rowcontentelement)
 }
+
+rowcontentelement.style.margin = "auto"
 
 let columns = document.getElementsByClassName('element-carroussel')
 

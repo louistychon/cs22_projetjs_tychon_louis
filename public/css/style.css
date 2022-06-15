@@ -21328,6 +21328,11 @@ main .theprinciple {
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .alltext {
+    width: 50%;
+  }
+}
 footer {
   background-color: #1e1e1e;
   color: lightgrey;
@@ -21717,6 +21722,9 @@ footer .inputlike {
 
   form {
     width: 80% !important;
+  }
+  form button {
+    margin: auto;
   }
 }
 #section12 {
