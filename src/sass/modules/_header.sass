@@ -13,6 +13,7 @@ nav
     .navbar-nav
         width: 60%
         justify-content: flex-end
+        flex-wrap: nowrap
     .navbar-nav a
         text-transform: uppercase
         color: black
@@ -29,3 +30,11 @@ nav
             margin-left: 15px
 .navbar-links-white
     color: white !important
+
+@media (max-width: 1000px)
+    .navbar-collapse
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        .icons_header
+            justify-content: center
