@@ -21298,7 +21298,7 @@ nav .icons_header i {
   color: white !important;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .navbar-collapse {
     display: flex;
     flex-direction: column;
@@ -21306,6 +21306,11 @@ nav .icons_header i {
   }
   .navbar-collapse .icons_header {
     justify-content: center;
+  }
+}
+@media (max-width: 320px) {
+  nav {
+    width: 100%;
   }
 }
 body {
@@ -21490,8 +21495,27 @@ footer .inputlike {
   }
 }
 @media (max-width: 768px) {
-  .womens {
+  #section1 .womens {
     display: none;
+  }
+  #section1 .text-slider {
+    width: 40vw !important;
+  }
+}
+@media (max-width: 320px) {
+  #section1 {
+    background-position: right;
+  }
+  #section1 .text-slider {
+    width: 100vw !important;
+  }
+  #section1 .social {
+    display: none !important;
+  }
+  #section1 .carroussel-nav {
+    top: 80vh !important;
+    left: 25% !important;
+    flex-direction: row !important;
   }
 }
 #section2 {
@@ -21499,7 +21523,7 @@ footer .inputlike {
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  height: fit-content;
+  height: 200px;
   margin: auto;
 }
 #section2 i {
