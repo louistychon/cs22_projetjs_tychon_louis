@@ -45,8 +45,7 @@ for (let index = 0; index < buttoncarroussel.length; index++) {
 let productsi = document.getElementsByClassName("products")[0]
 let imagesproducts = document.getElementsByClassName('imgproduct')
 
-let sun = document.getElementsByTagName("i")[0]
-let moon = document.getElementsByTagName("i")[1]
+let moon = document.getElementsByTagName("i")[0]
 //row1 - the row-cols-5 in the bootstrap defines the wrap
 for (let i = 0; i < 10; i++) {
     //creation of elements
@@ -77,6 +76,7 @@ for (let i = 0; i < 10; i++) {
     img.classList.add("imgproduct")
     let name = document.createElement('p')
     name.innerHTML = productstable[i].name
+    name.classList.add("darkmode")
     name.style.fontWeight = "bold"
     let oldprice = document.createElement('p')
     //div that contains the prices for display flex
@@ -147,7 +147,7 @@ for (let i = 0; i < 10; i++) {
         if (iconheart.style.color == "red") {
             productsliked.push(productstable[i].name)
         } else {
-            
+
         }
         heartnav.innerHTML += productsliked.length
     })
@@ -177,18 +177,50 @@ for (let i = 0; i < 10; i++) {
 
 }
 
-let p = document.getElementsByTagName("p")
-sun.addEventListener('click', () => {
-    document.body.style.backgroundColor = "black"
-    // p.forEach(element => {element.style.backgroundColor = "white"})
-})
-
 //carrousel testimonial
 
+let leftarrow = document.getElementsByClassName('fa-arrow-left')[0]
+let rightarrow = document.getElementsByClassName('fa-arrow-right')[0]
+let testimonials = document.getElementsByClassName('testimonial')
+
+leftarrow.addEventListener('click', () => {
+    testimonials[0].style.transform = "" 
+    testimonials.appendChild(testimonials[0])
+})
 
 
 //darkmode
-
+let para = document.getElementsByClassName("darkmode")
+let whitebg = document.getElementsByClassName("whitebg")
+let card = document.getElementsByClassName("card")
+let cardfooter = document.getElementsByClassName("card-footer")
+let photography = document.getElementsByClassName("photography")
+let textmuted = document.getElementsByClassName("text-muted")
+console.log(whitebg)
+moon.addEventListener('click', () => {
+    if (document.body.style.backgroundColor == "white") {
+        document.body.style.backgroundColor = "black"
+        for (let i = 0; i < card.length; i++) {
+            card[i].style.backgroundColor = "black"
+            cardfooter[i].style.backgroundColor = "black"
+            photography[i].style.border = "1px solid white"
+        }
+        for (let index = 0; index < para.length; index++) {
+            para[index].style.color = "white"
+        }
+    }
+    else{
+        document.body.style.backgroundColor = "white"
+        for (let i = 0; i < card.length; i++) {
+            card[i].style.backgroundColor = "white"
+            cardfooter[i].style.backgroundColor = "white"
+            photography[i].style.border = "1px solid black"
+        }
+        for (let index = 0; index < para.length; index++) {
+            para[index].style.color = "black"
+        }
+    }
+})
 
 
 

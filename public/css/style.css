@@ -21449,7 +21449,7 @@ footer .contentblackline img {
 
 #section3 {
   gap: 50px;
-  height: 500px;
+  height: 300px;
   margin: auto;
 }
 #section3 img {
@@ -21550,7 +21550,7 @@ footer .contentblackline img {
   margin-bottom: 25vh;
 }
 #section10 .card .card-footer {
-  background-color: white !important;
+  background-color: white;
 }
 
 #section11 {
