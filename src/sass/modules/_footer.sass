@@ -9,7 +9,6 @@ footer
         padding-left: 0px !important
     .newsletter
         width: 70%
-        height: fit-content
         align-items: center
         align-content: center
         margin: auto
@@ -20,7 +19,7 @@ footer
             margin-block-end: 0px
         input
             background-color: #303030
-            boder: none !important
+            border: none !important
         button
             background-color: #303030
             border: none
@@ -38,7 +37,7 @@ footer
         .gridinsta
             display: grid
             gap: 5px
-            grid-template-columns: 1fr 1fr 1fr 1fr
+            grid-template-columns: repeat(4,1fr)
     .blackline
         background-color: black
         width: 100%
@@ -54,10 +53,20 @@ footer
             height:100%
     .inputlike
         background-color: #303030
+.scrollup
+    position: fixed
+    bottom: 5vh
+    right: 0px
+    transform: rotate(-90deg)
+    text-decoration: none
+    color: grey !important
+    
 
 @media (max-width: 1023px)
     .newsletter, .contentblackline, .links
         width: 100% !important
+    .social
+            flex-wrap: nowrap
 @media (max-width: 768px)
     .newsletter, .contentblackline, .links
         text-align: center

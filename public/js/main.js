@@ -333,5 +333,19 @@ moon.addEventListener('click', () => {
 })
 
 
+//scrollup
+
+let scrollup = document.querySelector('.scrollup')
+scrollup.style.visibility = "hidden"
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY
+    if (scrolled > window.innerHeight - (0.5 * window.innerHeight)) {
+        scrollup.style.visibility = "visible"
+    }else{
+        scrollup.style.visibility = "hidden"
+    }
+})
+
+
 
 //decount products
