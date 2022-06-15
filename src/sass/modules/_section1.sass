@@ -56,19 +56,21 @@
         right: 3vh
 
 @media (max-width: 768px)
-    .womens
-        display: none
-    .text-slider
-        width: 40vw !important
-@media (max-width: 600px)
-    .text-slider
-        width: 80vw !important
-    .social
-        display: none !important
-    .carroussel-nav
-        flex-direction: row !important
-        top: 65vh !important
-        right: 35vw !important
-        
-    
+    #section1
+        .womens
+            display: none
+        .text-slider
+            width: 40vw !important
 
+@media (max-width: 320px)
+    #section1
+        background-position: right
+        .text-slider
+            width: 100vw !important
+        .social
+            display: none !important
+        .carroussel-nav
+            top: 80vh !important
+            left: 25% !important
+            flex-direction: row !important
+        
