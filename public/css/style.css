@@ -21277,15 +21277,12 @@ nav .navbar-nav {
   justify-content: flex-end;
   flex-wrap: nowrap;
 }
-nav .navbar-nav a {
+nav .navbar-nav > a {
   text-transform: uppercase;
   color: black;
 }
-nav .navbar-nav a a:link {
-  color: black;
-}
-nav .navbar-nav a a:active {
-  text-decoration: underline;
+nav .nav-link:hover {
+  text-decoration: underline !important;
 }
 nav .icons_header {
   padding: 15px;
@@ -21682,6 +21679,28 @@ footer input {
   left: 2vh;
 }
 
+@media (max-width: 768px) {
+  .div-icon1 {
+    left: 0;
+    top: 17vw;
+  }
+
+  .div-icon2 {
+    right: 0;
+    top: 17vw;
+  }
+}
+@media (max-width: 320px) {
+  .div-icon1 {
+    left: 0;
+    top: 83vw;
+  }
+
+  .div-icon2 {
+    right: 0;
+    top: 83vw;
+  }
+}
 #section8 {
   background-color: #f7f2ed;
   display: flex;

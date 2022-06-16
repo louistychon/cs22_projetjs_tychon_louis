@@ -42,13 +42,8 @@ let buttoncarroussel = document.getElementsByClassName('button-carroussel')
 
 for (let index = 0; index < buttoncarroussel.length; index++) {
     buttoncarroussel[index].addEventListener("click", () => {
-        let img = imgcarroussel[index]
-        section1.style.backgroundImage = "url(" + img + ")"
+        section1.style.backgroundImage = "url(" + imgcarroussel[index] + ")"
     })
-    setTimeout(() =>{ 
-         let img2 = imgcarroussel[2]
-        section1.style.backgroundImage = "url(" + img2 + ")"
-    }, 2000)
 }
 
 
@@ -102,9 +97,10 @@ for (let i = 0; i < 10; i++) {
     newprice.innerHTML = productstable[i].newprice
     newprice.style.color = "rgb(177, 171, 171)"
     newprice.style.padding = "10px"
-    divprices.style.display = "flex"
-    divprices.style.justifyContent = "center"
-    
+    divprices.classList.add("d-flex")
+    divprices.classList.add("justify-content-center")
+    divprices.classList.add("flex-wrap")
+
     div3.classList.add("div-icon1")
     div4.classList.add("div-icon2")
     //append child
@@ -116,13 +112,13 @@ for (let i = 0; i < 10; i++) {
     div.appendChild(divprices)
     div.appendChild(iconheart)
     //green square promotionnal
-    
+
     let promotiongreen = document.createElement('div')
-    if(productstable[i].discount){
+    if (productstable[i].discount) {
         let oldpricewithoutdollar = productstable[i].oldprice.replace(/\$/g, '')
         let newpricewithoutdollar = productstable[i].newprice.replace(/\$/g, '')
         let discountproduct = +(oldpricewithoutdollar) / +(newpricewithoutdollar) - 1
-        promotiongreen.innerHTML += "-" + Math.round(discountproduct * 100)+ "%"
+        promotiongreen.innerHTML += "-" + Math.round(discountproduct * 100) + "%"
         div.appendChild(promotiongreen)
         promotiongreen.style.height = "20px"
         promotiongreen.style.width = "50px"
@@ -130,7 +126,8 @@ for (let i = 0; i < 10; i++) {
         promotiongreen.style.position = "absolute"
         promotiongreen.style.maxWidth = "100%"
         promotiongreen.classList.add("promotiongreen")
-        promotiongreen.style.backgroundColor = "green"}
+        promotiongreen.style.backgroundColor = "green"
+    }
     //icon left and right positioning
 
     iconleft.style.top = "45%"
@@ -233,7 +230,7 @@ for (let i = 0; i < 6; i++) {
     col4.classList.add('4', "text-center", "mt-2")
     let imgavatar = document.createElement('img')
     imgavatar.setAttribute('src', testimonialstable[i].image)
-    imgavatar.classList.add('rounded-circle', "img-fluid", "w-50")
+    imgavatar.classList.add('rounded-circle', "img-fluid")
     whitebackground.style.backgroundColor = "white"
     whitebackground.classList.add('whitebg')
     let pname = document.createElement('p')
@@ -352,7 +349,7 @@ window.addEventListener('scroll', () => {
     const scrolled = window.scrollY
     if (scrolled > window.innerHeight - (0.5 * window.innerHeight)) {
         scrollup.style.visibility = "visible"
-    }else{
+    } else {
         scrollup.style.visibility = "hidden"
     }
 })
