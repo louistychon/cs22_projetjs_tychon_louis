@@ -91,7 +91,7 @@ for (let i = 0; i < 10; i++) {
     iconleft.style.visibility = "hidden"
     iconright.style.visibility = "hidden"
     //col for bootstrap and assign content into it
-    div.classList.add("col")
+    // div.classList.add("col")
     let img = document.createElement('img')
     img.setAttribute('src', productstable[i].image)
     img.classList.add("imgproduct")
@@ -193,8 +193,6 @@ for (let i = 0; i < 10; i++) {
         iconright.style.visibility = "hidden"
         iconheart.style.visibility = "hidden"
         promotiongreen.style.visibility = "hidden"
-        div3.style.visibility = "hidden"
-        div4.style.visibility = "hidden"
         setTimeout(() => {
             img.style.transform = "scale(1)";
             img.style.transition = "transform 0.25s ease";
@@ -205,8 +203,7 @@ for (let i = 0; i < 10; i++) {
             div3.style.visibility = "visible"
             div4.style.visibility = "visible"
         }, 2000)
-    })
-
+    })    
 }
 
 //carrousel testimonial

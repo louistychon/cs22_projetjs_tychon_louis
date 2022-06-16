@@ -21348,14 +21348,15 @@ footer .row {
   padding-left: 0px !important;
 }
 footer .newsletter {
+  border-bottom: 1px solid lightgrey;
   padding-top: 2vh;
-  width: 70%;
+  width: 100%;
   align-items: center;
   align-content: center;
   margin: auto;
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 footer .newsletter p {
   margin-block-end: 0px;
@@ -21381,8 +21382,8 @@ footer .links {
 footer .links ul {
   padding-inline-start: 0px;
 }
-footer .links li {
-  color: lightgrey;
+footer .links li, footer .links p {
+  color: #525050;
 }
 footer .links .gridinsta {
   display: grid;
@@ -21429,7 +21430,7 @@ footer input {
     flex-wrap: nowrap;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .newsletter, .contentblackline, .links {
     text-align: center;
     flex-direction: column;
@@ -21570,6 +21571,9 @@ footer input {
 }
 #section2 i {
   margin-right: 5px;
+}
+#section2 p {
+  color: grey;
 }
 
 @media (max-width: 768px) {
