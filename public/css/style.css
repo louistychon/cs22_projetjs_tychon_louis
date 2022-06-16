@@ -21361,6 +21361,7 @@ footer .newsletter p {
   margin-block-end: 0px;
 }
 footer .newsletter input {
+  align-self: top;
   background-color: #303030;
   border: none !important;
 }
@@ -21391,7 +21392,7 @@ footer .links .gridinsta {
 footer .blackline {
   background-color: black;
   width: 100%;
-  height: 75px;
+  height: 50px;
 }
 footer .contentblackline {
   display: flex;
@@ -21498,6 +21499,10 @@ footer input {
   top: 35%;
   right: 3%;
 }
+#section1 .carroussel-nav button:focus {
+  outline: none;
+  box-shadow: none;
+}
 #section1 .carroussel-nav button:focus::before {
   content: "-";
 }
@@ -21539,7 +21544,7 @@ footer input {
 }
 @media (max-width: 320px) {
   #section1 {
-    background-position: right;
+    background-position: center;
   }
   #section1 .text-slider {
     width: 80vw !important;

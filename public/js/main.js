@@ -39,12 +39,22 @@ let section1 = document.getElementById("section1")
 let imgcarroussel = ["public/img/collect/one-page-img-04.jpg", "public/img/collect/one-page-slider-01.jpg", "public/img/collect/one-page-img-04.jpg", "public/img/collect/one-page-slider-01.jpg"]
 let buttoncarroussel = document.getElementsByClassName('button-carroussel')
 
-
 for (let index = 0; index < buttoncarroussel.length; index++) {
     buttoncarroussel[index].addEventListener("click", () => {
         section1.style.backgroundImage = "url(" + imgcarroussel[index] + ")"
     })
 }
+
+let currentTab = 0;
+setInterval(() => {
+    var tabs = document.getElementsByClassName('button-carroussel')
+    tabs[currentTab].click();
+    tabs[currentTab].focus();
+    currentTab++;
+    
+    if (currentTab >= tabs.length)
+     currentTab = 0;
+ }, 3000);
 
 
 //section7 product gallery
