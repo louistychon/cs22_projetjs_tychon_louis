@@ -8,6 +8,7 @@ footer
         padding-right: 0px !important
         padding-left: 0px !important
     .newsletter
+        padding-top: 2vh
         width: 70%
         align-items: center
         align-content: center
@@ -41,7 +42,7 @@ footer
     .blackline
         background-color: black
         width: 100%
-        height: 50px
+        height: 75px
     .contentblackline
         display: flex
         justify-content: space-between
@@ -51,12 +52,14 @@ footer
         align-items: center
         img
             height:100%
-    .inputlike
+    input
         background-color: #303030
+        display: block
 .scrollup
     position: fixed
     bottom: 5vh
     right: 0px
+    z-index: 5
     transform: rotate(-90deg)
     text-decoration: none
     color: grey !important
@@ -72,14 +75,22 @@ footer
         text-align: center
         flex-direction: column
         flex-wrap: wrap
+        margin: auto !important
+        width: 100% !important
         .col
             margin-top: 3%
+    .social
+        margin-top: 3vh
 @media (max-width: 320px)
     .newsletter > div
         flex-direction: column
         padding-top: 2vh
     .newsletter
         padding-top: 2vh
+        .inputlike
+            flex-direction: column
+            ::placeholder
+                text-align: center
 
         
             

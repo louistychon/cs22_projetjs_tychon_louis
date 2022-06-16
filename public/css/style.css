@@ -11119,6 +11119,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../public/css/font/Poppins/Poppins-Medium.ttf");
+}
+body {
+  font-family: "Poppins" !important;
+}
+
 /*!
  * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -21330,7 +21338,7 @@ main .theprinciple {
 
 @media (max-width: 768px) {
   .alltext {
-    width: 100%;
+    width: 95% !important;
   }
 }
 footer {
@@ -21343,6 +21351,7 @@ footer .row {
   padding-left: 0px !important;
 }
 footer .newsletter {
+  padding-top: 2vh;
   width: 70%;
   align-items: center;
   align-content: center;
@@ -21385,7 +21394,7 @@ footer .links .gridinsta {
 footer .blackline {
   background-color: black;
   width: 100%;
-  height: 50px;
+  height: 75px;
 }
 footer .contentblackline {
   display: flex;
@@ -21398,14 +21407,16 @@ footer .contentblackline {
 footer .contentblackline img {
   height: 100%;
 }
-footer .inputlike {
+footer input {
   background-color: #303030;
+  display: block;
 }
 
 .scrollup {
   position: fixed;
   bottom: 5vh;
   right: 0px;
+  z-index: 5;
   transform: rotate(-90deg);
   text-decoration: none;
   color: grey !important;
@@ -21425,9 +21436,15 @@ footer .inputlike {
     text-align: center;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: auto !important;
+    width: 100% !important;
   }
   .newsletter .col, .contentblackline .col, .links .col {
     margin-top: 3%;
+  }
+
+  .social {
+    margin-top: 3vh;
   }
 }
 @media (max-width: 320px) {
@@ -21438,6 +21455,12 @@ footer .inputlike {
 
   .newsletter {
     padding-top: 2vh;
+  }
+  .newsletter .inputlike {
+    flex-direction: column;
+  }
+  .newsletter .inputlike ::placeholder {
+    text-align: center;
   }
 }
 #section1 {
@@ -21623,7 +21646,7 @@ footer .inputlike {
 }
 #section7 {
   margin: auto;
-  margin-bottom: 25vh;
+  margin-bottom: 15vh;
   text-align: center;
 }
 #section7 .container {
@@ -21634,21 +21657,29 @@ footer .inputlike {
 #section7 .container p {
   margin-bottom: 0px;
 }
-#section7 .div-icon1 {
+#section7 .div-icon1, #section7 .div-icon2 {
   position: absolute;
-  left: 30;
-  bottom: 30;
   z-index: 1;
+  height: 50px;
+  width: 50%;
+  background-color: #1e1e1e;
+  opacity: 0.9;
+}
+#section7 .div-icon1 {
+  left: 0;
+  bottom: 9vw;
 }
 #section7 .div-icon2 {
-  position: absolute;
-  right: 30;
-  bottom: 30;
-  z-index: 1;
+  right: 0;
+  bottom: 9vw;
 }
 #section7 .display-icon {
   position: absolute;
   z-index: 2;
+}
+#section7 .promotiongreen {
+  top: 1vh;
+  left: 2vh;
 }
 
 #section8 {
@@ -21691,8 +21722,13 @@ footer .inputlike {
     width: 100% !important;
   }
 }
+@media (max-width: 768px) {
+  .testimonialtextintro {
+    width: 100% !important;
+  }
+}
 #section10 {
-  margin-bottom: 25vh;
+  margin-bottom: 15vh;
 }
 #section10 .card .card-footer {
   background-color: white;
@@ -21710,6 +21746,7 @@ footer .inputlike {
   height: 700px;
 }
 #section11 .address {
+  padding-top: 3vh;
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -21759,6 +21796,7 @@ footer .inputlike {
 @media (max-width: 768px) {
   .address {
     width: 80% !important;
+    text-align: center;
   }
 
   .imageflower {
@@ -21781,6 +21819,11 @@ footer .inputlike {
   }
   form button {
     margin: auto;
+  }
+}
+@media (max-width: 320px) {
+  .address {
+    width: 100% !important;
   }
 }
 #section12 {

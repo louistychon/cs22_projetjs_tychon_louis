@@ -71,10 +71,12 @@ for (let i = 0; i < 10; i++) {
     //position and custom font-awesome classes 
     iconleft.classList.add("fa-solid", "fa-layer-group")
     iconright.classList.add("fa-solid", "fa-eye")
+    iconright.style.color = "white"
     iconheart.classList.add("fa-solid", "fa-heart")
     div.style.position = "relative"
     iconheart.style.position = "absolute"
     iconleft.style.position = "absolute"
+    iconleft.style.color = "white"
     iconright.style.position = "absolute"
     //visibility
     iconheart.style.visibility = "hidden"
@@ -102,19 +104,9 @@ for (let i = 0; i < 10; i++) {
     newprice.style.padding = "10px"
     divprices.style.display = "flex"
     divprices.style.justifyContent = "center"
-    div3.style.backgroundColor = "white"
-    div3.style.opacity = "0.9"
-    div3.style.height = "50px"
-    div3.style.width = "50%"
-    div4.style.backgroundColor = "white"
-    div4.style.height = "50px"
-    div4.style.width = "50%"
-    div3.style.position = "absolute"
-    div4.style.position = "absolute"
-    div4.style.right = "0"
-    div4.style.bottom = "25%"
-    div3.style.left = "0"
-    div3.style.bottom = "25%"
+    
+    div3.classList.add("div-icon1")
+    div4.classList.add("div-icon2")
     //append child
     productsi.appendChild(div)
     divprices.appendChild(oldprice)
@@ -123,18 +115,35 @@ for (let i = 0; i < 10; i++) {
     div.appendChild(name)
     div.appendChild(divprices)
     div.appendChild(iconheart)
-
+    //green square promotionnal
+    
+    let promotiongreen = document.createElement('div')
+    if(productstable[i].discount){
+        let oldpricewithoutdollar = productstable[i].oldprice.replace(/\$/g, '')
+        let newpricewithoutdollar = productstable[i].newprice.replace(/\$/g, '')
+        let discountproduct = +(oldpricewithoutdollar) / +(newpricewithoutdollar) - 1
+        promotiongreen.innerHTML += "-" + Math.round(discountproduct * 100)+ "%"
+        div.appendChild(promotiongreen)
+        promotiongreen.style.height = "20px"
+        promotiongreen.style.width = "50px"
+        promotiongreen.style.color = "white"
+        promotiongreen.style.position = "absolute"
+        promotiongreen.style.maxWidth = "100%"
+        promotiongreen.classList.add("promotiongreen")
+        promotiongreen.style.backgroundColor = "green"}
     //icon left and right positioning
 
     iconleft.style.top = "45%"
     iconright.style.top = "45%"
-
+    promotiongreen.style.visibility = "visible"
     //onhover image changes and the icons appears
     imagesproducts[i].addEventListener("mouseover", () => {
         imagesproducts[i].setAttribute('src', productstable[i].image2)
         iconheart.style.visibility = "visible"
         iconleft.style.visibility = "visible"
         iconright.style.visibility = "visible"
+        div3.style.visibility = "visible"
+        div4.style.visibility = "visible"
         iconheart.style.right = "10%"
         iconheart.style.top = "5%"
         div3.appendChild(iconleft)
@@ -146,8 +155,8 @@ for (let i = 0; i < 10; i++) {
             iconheart.style.visibility = "hidden"
             iconleft.style.visibility = "hidden"
             iconright.style.visibility = "hidden"
-            div.removeChild(div3)
-            div.removeChild(div4)
+            div3.style.visibility = "hidden"
+            div4.style.visibility = "hidden"
         }, 2000)
     })
     //increase number of likes in the nav
@@ -173,6 +182,7 @@ for (let i = 0; i < 10; i++) {
         iconleft.style.visibility = "hidden"
         iconright.style.visibility = "hidden"
         iconheart.style.visibility = "hidden"
+        promotiongreen.style.visibility = "hidden"
         div3.style.visibility = "hidden"
         div4.style.visibility = "hidden"
         setTimeout(() => {
@@ -181,6 +191,7 @@ for (let i = 0; i < 10; i++) {
             iconleft.style.visibility = "visible"
             iconright.style.visibility = "visible"
             iconheart.style.visibility = "visible"
+            promotiongreen.style.visibility = "visible"
             div3.style.visibility = "visible"
             div4.style.visibility = "visible"
         }, 2000)
