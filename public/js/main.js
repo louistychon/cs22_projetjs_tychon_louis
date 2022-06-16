@@ -47,15 +47,18 @@ for (let index = 0; index < buttoncarroussel.length; index++) {
 
 let currentTab = 0;
 setInterval(() => {
+    //clicks on the button that changes the background image
     var tabs = document.getElementsByClassName('button-carroussel')
     tabs[currentTab].click();
-    tabs[currentTab].focus();
+    //preventsscrolling to top of page but focuses the element
+    tabs[currentTab].focus({ 
+        preventScroll: true
+      });
     currentTab++;
-    
+     //if we reach the end of the buttons table, then we reset the current tab variable.
     if (currentTab >= tabs.length)
-     currentTab = 0;
- }, 3000);
-
+    currentTab = 0;
+}, 3000);
 
 //section7 product gallery
 let productsi = document.getElementsByClassName("products")[0]
