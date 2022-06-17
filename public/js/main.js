@@ -171,9 +171,13 @@ for (let i = 0; i < 10; i++) {
     })
     //increase number of likes in the nav
     iconheart.addEventListener('click', () => {
-        iconheart.style.color = "red"
-        if (iconheart.style.color == "red") {
+        if (iconheart.style.color != "red") {
+            iconheart.style.color = "red"
             heartnav.innerHTML = +heartnav.innerHTML + 1
+        }
+        else{
+            iconheart.style.color = ""
+            heartnav.innerHTML = +heartnav.innerHTML - 1
         }
     })
     //increase number of products in basket
