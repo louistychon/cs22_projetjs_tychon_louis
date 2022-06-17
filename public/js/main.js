@@ -51,11 +51,11 @@ setInterval(() => {
     var tabs = document.getElementsByClassName('button-carroussel')
     tabs[currentTab].click();
     //preventsscrolling to top of page but focuses the element
-    tabs[currentTab].focus({ 
+    tabs[currentTab].focus({
         preventScroll: true
-      });
+    });
     currentTab++;
-     //if we reach the end of the buttons table, then we reset the current tab variable.
+    //if we reach the end of the buttons table, then we reset the current tab variable.
     if (currentTab >= tabs.length)
     currentTab = 0;
 }, 3000);
@@ -113,7 +113,7 @@ for (let i = 0; i < 10; i++) {
     divprices.classList.add("d-flex")
     divprices.classList.add("justify-content-center")
     divprices.classList.add("flex-wrap")
-
+    
     div3.classList.add("div-icon1")
     div4.classList.add("div-icon2")
     //append child
@@ -124,8 +124,8 @@ for (let i = 0; i < 10; i++) {
     div.appendChild(name)
     div.appendChild(divprices)
     div.appendChild(iconheart)
+    
     //green square promotionnal
-
     let promotiongreen = document.createElement('div')
     if (productstable[i].discount) {
         let oldpricewithoutdollar = productstable[i].oldprice.replace(/\$/g, '')
@@ -141,13 +141,13 @@ for (let i = 0; i < 10; i++) {
         promotiongreen.classList.add("promotiongreen")
         promotiongreen.style.backgroundColor = "green"
     }
-    //icon left and right positioning
 
+    //icon left and right positioning
     iconleft.style.top = "45%"
     iconright.style.top = "45%"
     promotiongreen.style.visibility = "visible"
     //onhover image changes and the icons appears
-    imagesproducts[i].addEventListener("mouseover", () => {
+    imagesproducts[i].addEventListener("click", () => {
         imagesproducts[i].setAttribute('src', productstable[i].image2)
         iconheart.style.visibility = "visible"
         iconleft.style.visibility = "visible"
@@ -167,7 +167,7 @@ for (let i = 0; i < 10; i++) {
             iconright.style.visibility = "hidden"
             div3.style.visibility = "hidden"
             div4.style.visibility = "hidden"
-        }, 2000)
+        }, 10000)
     })
     //increase number of likes in the nav
     iconheart.addEventListener('click', () => {
@@ -203,7 +203,25 @@ for (let i = 0; i < 10; i++) {
             div3.style.visibility = "visible"
             div4.style.visibility = "visible"
         }, 2000)
-    })    
+    })
+    var deadline = new Date("jun 17, 2022 17:00:00").getTime();
+    for (let index = 0; index < productstable.length; index++) {
+        if (productstable[index].count === true) {
+        let divtime = document.createElement("div")
+        let ptime = document.createElement("p")
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                ptime.innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds
+                divtime.appendChild(ptime)
+                div.appendChild(divtime)
+            }, 1000)
+        }
+    }
 }
 
 //carrousel testimonial
@@ -363,7 +381,3 @@ window.addEventListener('scroll', () => {
         scrollup.style.visibility = "hidden"
     }
 })
-
-
-
-//decount products

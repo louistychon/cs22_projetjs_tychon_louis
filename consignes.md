@@ -42,3 +42,6 @@
 
 ### Bonus
 7. Un compte à rebours sur un produit aléatoire
+
+//placement boutons produits à faire
+//click, ou enlever le temps sur les produits. 
